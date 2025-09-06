@@ -1,11 +1,11 @@
 import { DynamicSidebarSystem } from "@/components/dynamic-sidebar-system"
 
-export default function Home() {
+export default function PracticePage() {
   return (
     <DynamicSidebarSystem 
-      width="100%"
-      centered={false}
-      className="h-screen"
+      width="900px"
+      centered={true}
+      className="bg-background"
     />
   )
 }
