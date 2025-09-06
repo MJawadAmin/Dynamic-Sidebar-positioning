@@ -4,22 +4,24 @@ import * as React from "react"
 
 interface TooltipIndicatorProps {
   activeItemIndex: number
-  itemHeight: number
-  topOffset: number
   visible: boolean
 }
 
 export const TooltipIndicator: React.FC<TooltipIndicatorProps> = ({
   activeItemIndex,
-  itemHeight,
-  topOffset,
   visible
 }) => {
   const calculatePosition = () => {
-    // Calculate the exact position based on active item index
-    const itemSpacing = 4 // space-y-1 = 4px gap
-    const position = topOffset + (activeItemIndex * (itemHeight + itemSpacing)) + (itemHeight / 2)
-    return position
+    // Calculate the exact center position for each button
+    const buttonHeight = 40 // Standard button height
+    const buttonSpacing = 4 // space-y-1 gap between buttons
+    const paddingTop = 8 // p-2 = 8px padding from nav top
+    
+    // Calculate exact center of the active button
+    const buttonTop = paddingTop + (activeItemIndex * (buttonHeight + buttonSpacing))
+    const buttonCenter = buttonTop + (buttonHeight / 2)
+    
+    return buttonCenter
   }
 
   if (!visible) return null

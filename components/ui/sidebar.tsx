@@ -113,8 +113,6 @@ export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>(
           {/* Single moving tooltip indicator */}
           <TooltipIndicator
             activeItemIndex={activeItemIndex}
-            itemHeight={40} // Approximate button height
-            topOffset={8} // Offset from nav top
             visible={activeItemIndex >= 0}
           />
         </nav>
