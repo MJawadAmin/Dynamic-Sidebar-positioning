@@ -115,7 +115,7 @@ export default function PracticePage() {
           />
           
           <main className="flex-1 overflow-auto bg-background">
-            <div className="h-full p-6">
+            <div className="h-full p-6 ">
               {renderPage()}
             </div>
           </main>
