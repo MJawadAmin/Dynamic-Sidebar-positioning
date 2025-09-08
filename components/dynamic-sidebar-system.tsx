@@ -151,7 +151,6 @@ export const DynamicSidebarSystem: React.FC<DynamicSidebarSystemProps> = ({
         >
           {renderPage()}
         </AppLayout>
-        This is app Layout without modules install module
       </div>
     </div>
   )
